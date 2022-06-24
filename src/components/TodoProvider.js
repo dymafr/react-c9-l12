@@ -1,8 +1,9 @@
 import { useReducer } from 'react';
-import ThemeContext from '../context/theme';
-import { TodoStateContext } from '../context/todoContext';
-import { TodoDispatcherContext } from '../context/todoContext';
+import ThemeContext from '../context/ThemeContext';
+import { TodoStateContext } from '../context/TodoContext';
+import { TodoDispatcherContext } from '../context/TodoContext';
 import todoReducer from '../reducers/todoReducer';
+import React from 'react';
 
 function TodoProvider({ children }) {
   const [state, dispatch] = useReducer(todoReducer, {
